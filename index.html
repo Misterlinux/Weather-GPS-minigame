@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+
+    <script src="https://kit.fontawesome.com/331132e12f.js" crossorigin="anonymous"></script>
+
+    <title>Weather Report 天気予報</title>
+</head>
+<body>
+    
+    <div class="demo-wrap">
+
+        <img class="demo-bg pure-img" src="//live.staticflickr.com/65535/50615355532_3d66abee9f_z.jpg">
+
+
+      <div class="demo-content pure-g">
+
+        <div class="pure-u-sm-5-8 pure-u-1 title">
+            Welcome to the GeoGapGuesser App
+        </div>
+
+        <div class="pure-u-sm-3-8 pure-u-1 current">
+            <div class="pure-g" id="myresult">
+
+                <div class="pure-u-5-8 ucity">
+                    <h1 id="mycity"></h1>
+                    <p id="myhumidity"></p>
+                </div>
+
+                <div class="pure-u-3-8 ucity">
+                    <img id="myimage" src="" alt="" class="pure-img">
+                    <p id="mytemp"></p>
+                </div>
+
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="rules">
+
+        <p>
+            Welcome to my GeoDistancer game, one player sets the KM lenght while the other 
+            matches it with the distance between 2 cities
+        </p>
+
+        <p>
+            Its preferable to use the English name for the cities.
+        </p>
+
+        <div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div> 
+
+    </div>
+
+
+    <div class="demo-wrap">
+
+        <img class="pure-img demo-bg image-bg" src="//live.staticflickr.com/7128/7138919989_2186bb3689_z.jpg" alt="">
+
+        <div class="image-content ">
+
+            <div class="pure-g">
+
+                <div class="pure-u-md-2-3 pure-u-1">
+                    <div id='map' ></div>
+                </div>
+
+                <div class="pure-u-md-1-3 pure-u-1 centra">
+
+                    <div>
+                        <input type="text" id="distance" placeholder="Distance in KM">
+
+                        <div>
+                            <button id="btndist">calculate</button>
+                        </div>
+                    </div>
+                
+
+                    <div>
+                        <span>
+                            <input type="text" id="primo" placeholder="Starting city">
+                        </span>
+                        <span>
+                            <input type="text" id="secondo" placeholder="Arriving city">    
+                        </span>
+
+                        <div>
+                            <button id="btnprimo">secondo</button>        
+                        </div>
+                    </div>
+                
+
+                    <h2>Distance traveled: </h2>
+                    <h1 id="lontano"></h1>
+
+                    <h2>Final score: </h2>
+                    <h1 id="puntamento"></h1>
+
+
+                    <h3 id="finale"></h3>
+
+                </div>
+
+            </div>    
+
+        </div>
+
+    </div>
+
+
+    <div class="footer ">
+        <div class="pure-u-1">
+            Application made by 
+            <a href="https://github.com/Misterlinux?tab=repositories">Angelo Zarate</a>
+            , check out his 
+            <a href="https://codepen.io/your-work">codepen</a>
+        </div>
+    </div>
+      
+
+<script src="script.js"></script>
+
+<script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+</body>
+</html>
+
